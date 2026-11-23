@@ -17,7 +17,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "AQ.Ab8RN6L1WcsGEb1VKBKxJqzzzRS5lTjk2FioexlnXe7xcDOmFQ")
+GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "Put your key here")
 
 # Models to attempt in order of preference
 CANDIDATE_MODELS = [
