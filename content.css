@@ -1,0 +1,59 @@
+/* ScholarSaathi Content Script Styles */
+#scholarsaathi-floating-launcher {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 2147483647;
+  cursor: pointer;
+}
+
+.ss-launcher-btn {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #0f172a;
+  box-shadow: 0 10px 25px -5px rgba(124, 58, 237, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.ss-launcher-btn:hover {
+  transform: scale(1.08);
+}
+
+.ss-orb {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #f472b6, #8b5cf6 45%, #3b82f6 80%, #1e1b4b 100%);
+  box-shadow: 0 0 12px rgba(139, 92, 246, 0.8);
+  animation: ssOrbPulse 3s infinite alternate;
+}
+
+.ss-badge {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  background: #10b981;
+  color: #ffffff;
+  font-size: 9px;
+  font-weight: 800;
+  padding: 1px 5px;
+  border-radius: 999px;
+  border: 1.5px solid #0f172a;
+}
+
+@keyframes ssOrbPulse {
+  0% { transform: scale(0.95); opacity: 0.9; }
+  100% { transform: scale(1.06); opacity: 1; }
+}
+
+.scholarsaathi-autofill-glow {
+  outline: 2.5px solid #8b5cf6 !important;
+  background-color: rgba(237, 233, 254, 0.6) !important;
+  box-shadow: 0 0 16px rgba(139, 92, 246, 0.4) !important;
+  transition: all 0.3s ease-in-out !important;
+}

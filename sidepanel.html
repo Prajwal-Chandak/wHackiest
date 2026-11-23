@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ScholarSaathi AI Assistant</title>
+  <link rel="stylesheet" href="sidepanel.css">
+</head>
+<body>
+  <div class="ss-container">
+    <!-- Header -->
+    <header class="ss-header">
+      <div class="ss-brand">
+        <div class="ss-orb"></div>
+        <div>
+          <div class="ss-title-row">
+            <h1>ScholarSaathi</h1>
+            <span class="ss-status-dot"></span>
+          </div>
+          <p class="ss-tagline">Scholarships made simpler, one step at a time.</p>
+        </div>
+      </div>
+
+      <!-- Language Selector -->
+      <div class="ss-lang-selector">
+        <span class="ss-lang-label">Lang:</span>
+        <button class="ss-lang-btn active" data-lang="en">EN</button>
+        <button class="ss-lang-btn" data-lang="kn">ಕನ್ನಡ</button>
+        <button class="ss-lang-btn" data-lang="hi">हिंदी</button>
+      </div>
+    </header>
+
+    <!-- Welcome Card -->
+    <div class="ss-welcome">
+      <div class="ss-welcome-title">
+        <span class="ss-sparkle">✨</span>
+        <h2 id="welcome-text">Hello! I'm ScholarSaathi.</h2>
+      </div>
+      <p id="welcome-sub">Let me help you complete your scholarship application.</p>
+    </div>
+
+    <!-- 4 Action Cards -->
+    <div class="ss-actions-grid">
+      <button class="ss-card" id="btn-explain-page">
+        <div class="ss-card-icon icon-explain">💡</div>
+        <div class="ss-card-info">
+          <strong id="label-explain">Explain This Page</strong>
+          <span>Analyze current form</span>
+        </div>
+      </button>
+
+      <button class="ss-card" id="btn-autofill">
+        <div class="ss-card-icon icon-autofill">⚡</div>
+        <div class="ss-card-info">
+          <strong id="label-autofill">Fill My Application</strong>
+          <span>Use profile vault</span>
+        </div>
+      </button>
+
+      <button class="ss-card" id="btn-check-docs">
+        <div class="ss-card-icon icon-docs">📄</div>
+        <div class="ss-card-info">
+          <strong id="label-checkdocs">Check Documents</strong>
+          <span>Validate formats</span>
+        </div>
+      </button>
+
+      <button class="ss-card" id="btn-find-scholarships">
+        <div class="ss-card-icon icon-find">🔍</div>
+        <div class="ss-card-info">
+          <strong id="label-find">Find Scholarships</strong>
+          <span>Eligible schemes</span>
+        </div>
+      </button>
+    </div>
+
+    <!-- Chat Messages Stream -->
+    <div class="ss-chat-stream" id="chat-stream">
+      <div class="ss-msg ss-msg-ai">
+        <p id="first-msg">Hello! I'm ScholarSaathi. Ask me to explain any form field (like Annual Income or USN), check your uploaded files, or autofill using your saved profile.</p>
+        <span class="ss-msg-time">Just now</span>
+      </div>
+    </div>
+
+    <!-- Suggested Question Chips -->
+    <div class="ss-suggested-bar">
+      <div class="ss-chips-scroll">
+        <button class="ss-chip" data-q="What does annual family income mean?">What does annual family income mean?</button>
+        <button class="ss-chip" data-q="Which income certificate is accepted?">Which income certificate is accepted?</button>
+        <button class="ss-chip" data-q="Can I apply if my CGPA is below 7.0?">Can I apply if my CGPA is below 7.0?</button>
+      </div>
+    </div>
+
+    <!-- Chat Input Form -->
+    <form class="ss-input-bar" id="chat-form">
+      <button type="button" class="ss-mic-btn" id="btn-mic" title="Voice Input">🎙️</button>
+      <input type="text" id="chat-input" placeholder="Ask anything about this application..." autocomplete="off">
+      <button type="submit" class="ss-send-btn" id="btn-send">➔</button>
+    </form>
+  </div>
+
+  <script src="sidepanel.js"></script>
+</body>
+</html>

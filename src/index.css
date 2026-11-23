@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    border-color: theme('colors.slate.200');
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.4);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.7);
+}
+
+/* AI Orb breathing & gradient animations inspired by TaskFlow reference */
+.ai-orb {
+  background: radial-gradient(circle at 35% 35%, #f472b6, #8b5cf6 45%, #3b82f6 80%, #1e1b4b 100%);
+  box-shadow: 
+    0 0 25px 4px rgba(139, 92, 246, 0.45),
+    inset -4px -4px 10px rgba(30, 27, 75, 0.6),
+    inset 4px 4px 10px rgba(255, 255, 255, 0.8);
+  animation: orbFloat 5s ease-in-out infinite alternate;
+}
+
+@keyframes orbFloat {
+  0% {
+    transform: translateY(0px) scale(1) rotate(0deg);
+    filter: drop-shadow(0 4px 14px rgba(139, 92, 246, 0.4));
+  }
+  50% {
+    transform: translateY(-4px) scale(1.03) rotate(6deg);
+    filter: drop-shadow(0 8px 22px rgba(139, 92, 246, 0.6));
+  }
+  100% {
+    transform: translateY(0px) scale(1) rotate(0deg);
+    filter: drop-shadow(0 4px 14px rgba(139, 92, 246, 0.4));
+  }
+}
+
+/* Glassmorphism helpers */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.glass-panel-dark {
+  background: rgba(15, 23, 42, 0.92);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
